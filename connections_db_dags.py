@@ -1,10 +1,10 @@
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 from airflow import DAG
 
 from datetime import timedelta, datetime
 from config import LOG_DB, LOGS_PATH
 from common_args import default_args
-from db_connection import connection_db
+from db_connections import connection_db
 from logger import create_logger
 
 # Create and configure log

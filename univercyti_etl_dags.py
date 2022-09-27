@@ -7,7 +7,7 @@ from logger import create_logger
 
 
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 #from airflow.sensors.external_task_sensor import ExternalTaskSensor
 log_name = LOG_ETL + datetime.today().strftime('%Y-%m-%d')
 logger = create_logger(name_logger=log_name, log_path=LOGS_PATH)
